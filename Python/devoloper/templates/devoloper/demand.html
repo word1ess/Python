@@ -1,0 +1,49 @@
+{% extends 'devoloper/base.html' %}
+{% load static %}
+{% block title %}Востребованность{% endblock %}
+{% block intro %}
+<section class="page-intro intro-demand">
+    <div class="container">
+        <div class="page-intro__row">
+            <h1>Востребованность</h1>
+        </div>
+    </div>
+    <div class="page-intro__bg">
+        <div class="container">
+            <div class="page-intro__img">
+                <img src="@img/demand/intro.webp" alt="intro">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block content %}
+<h2 class="page-content__title content-demand__title">Динамика уровня зарплат по годам</h2>
+<div class="content-demand__img">
+    <picture>
+        <source srcset="{% static 'devoloper/images/demand/chart-one.webp'' %}" type="image/webp">
+        <img src="{% static 'devoloper/images/demand/chart-one.png' %}" alt="index-one"></picture>
+    </picture>
+</div>
+<h2 class="page-content__title content-demand__title">Динамика количества вакансий по годам</h2>
+<div class="content-demand__img" style="width: 697px;">
+    <picture>
+        <source srcset="{% static 'devoloper/images/demand/chart-two.webp'' %}" type="image/webp">
+        <img src="{% static 'devoloper/images/demand/chart-two.png' %}" alt="index-one"></picture>
+    </picture>
+</div>
+<h2 class="page-content__title content-demand__title">Динамика уровня зарплат по годам для выбранной профессии</h2>
+<div class="content-demand__img" style="width: 811px; height: 389px;">
+    <picture>
+        <source srcset="{% static 'devoloper/images/demand/chart-three.webp'' %}" type="image/webp">
+        <img src="{% static 'devoloper/images/demand/chart-three.png' %}" alt="index-one"></picture>
+    </picture>
+</div>
+<h2 class="page-content__title content-demand__title">Динамика количества вакансий по годам для выбранной профессии</h2>
+<div class="content-demand__img">
+    <picture>
+        <source srcset="{% static 'devoloper/images/demand/chart-four.webp'' %}" type="image/webp">
+        <img src="{% static 'devoloper/images/demand/chart-four.png' %}" alt="index-one"></picture>
+    </picture>
+</div>
+{% endblock %}

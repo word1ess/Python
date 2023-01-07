@@ -1,0 +1,35 @@
+{% extends 'devoloper/base.html' %}
+{% load static %}
+{% block title %}География{% endblock %}
+{% block intro %}
+<section class="page-intro">
+    <div class="container">
+        <div class="page-intro__row">
+            <h1>География</h1>
+        </div>
+    </div>
+    <div class="page-intro__bg">
+        <div class="container">
+            <div class="page-intro__img intro-geography__img">
+                <img src="@img/geography/intro.png" alt="intro">
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+{% block content %}
+<h2 class="page-content__title content-geography__title">Динамика уровня зарплат по годам</h2>
+<div class="content-geography__img" style="width: 673px;">
+    <picture>
+        <source srcset="{% static 'devoloper/geography/chart-one.webp' %}" type="image/webp">
+        <img src="{% static 'devoloper/images/geography/chart-one.png' %}" alt="index-one"></picture>
+    </picture>
+</div>
+<h2 class="page-content__title content-geography__title">Динамика количества вакансий по годам</h2>
+<div class="content-geography__img" style="width: 673px;">
+    <picture>
+        <source srcset="{% static 'devoloper/geography/chart-two.webp' %}" type="image/webp">
+        <img src="{% static 'devoloper/images/geography/chart-two.png' %}" alt="index-one"></picture>
+    </picture>
+</div>
+{% endblock %}
