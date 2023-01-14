@@ -1,0 +1,41 @@
+{% extends 'devoloper/base.html' %}
+{% load static %}
+{% block title %}Последние вакансии{% endblock %}
+{% block intro %}
+    <section class="page-intro intro-index">
+        <div class="container">
+            <div class="page-intro__row">
+                <h1>Последние вакансии</h1>
+            </div>
+        </div>
+        <div class="page-intro__bg">
+            <div class="container">
+                <div class="page-intro__img">
+                    <picture>
+                        <source srcset="{% static 'devoloper/images/recent-vacancies/intro.webp' %}" type="image/webp">
+                        <img src="{% static 'devoloper/images/recent-vacancies/intro.png' %}" alt="intro"></picture>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+{% block content %}
+    <div class="page-content content-vacancy">
+        <div class="content-vacancy__row">
+            {% for vacancy in vacancies %}
+              <div class="content-vacancy__item">
+                <h3 id="vacancyName">{{ vacancy.name }}</h3>
+                <p id="vacancyInfo">
+                {{ vacancy.description|safe|truncatewords:"20"|linebreaks }}
+                <a href="{{ vacancy.url }}" target="_blank">ещё</a>
+                </p>
+                <p id="vacancySkills">{{ vacancy.skills }}</p>
+                <p id="vacancyCompany">{{ vacancy.employer }}</p>
+                <p id="vacancySalary">{{ vacancy.salary }}</p>
+                <p id="vacancyRegion">{{ vacancy.city }}</p>
+                <p id="vacancyDate">{{ vacancy.date }}</p>
+              </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
